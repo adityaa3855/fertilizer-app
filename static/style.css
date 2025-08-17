@@ -2,8 +2,7 @@
 
 body {
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
- background: url("/static/bg.jpg") no-repeat center center fixed;
-
+  background: url("/static/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #f9fafb;
   margin: 0;
@@ -92,6 +91,7 @@ input, select {
   background: rgba(255,255,255,0.9);
   color: #111827;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 input:focus, select:focus {
@@ -154,5 +154,16 @@ footer {
   font-size: .9rem;
 }
 
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+/* ✅ Responsive Fixes */
+@media (max-width: 900px) { 
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) { 
+  .grid { grid-template-columns: 1fr; }
+  .actions { text-align: center; }   /* button center ho jaye */
+  button { width: 100%; }            /* button full width ho jaye */
+  .card { padding: 1rem; }           /* mobile pe padding kam ho */
+  .topbar h1 { font-size: 2rem; }    /* heading mobile pe chhoti */
+  .topbar p { font-size: 1rem; }
+}
